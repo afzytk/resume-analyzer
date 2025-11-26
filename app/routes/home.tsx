@@ -1,4 +1,5 @@
-import type { Route } from "./+types/home"
+import type { Route } from "./+types/home";
+import Navbar from "../components/Navbar";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -8,12 +9,15 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
-  return <main className="bg-[url('/images/bg-main.svg')] bg-cover">
-    <section className='main-section'>
-        <div className='page-heading'>
-            <h1>Track Your applications & Resume Rating</h1>
-            <h2>Review your submission and check AI-Powered feedback</h2>
+  return (
+    <main className="bg-[url('/images/bg-main.svg')] bg-cover">
+      <Navbar />
+      <section className="main-section">
+        <div className="page-heading">
+          <h1>Track Your applications & Resume Rating</h1>
+          <h2>Review your submission and check AI-Powered feedback</h2>
         </div>
-    </section>
-      </main>;
+      </section>
+    </main>
+  );
 }
